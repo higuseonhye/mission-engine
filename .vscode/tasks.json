@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Mission Engine: Start Dev",
+      "type": "shell",
+      "command": "npm run dev",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "custom",
+        "pattern": { "regexp": "." },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Starting",
+          "endsPattern": "Ready in"
+        }
+      },
+      "presentation": { "reveal": "always" }
+    },
+    {
+      "label": "Mission Engine: Open Preview",
+      "type": "shell",
+      "command": "start vscode://ms-vscode.simple-browser/show?url=http://localhost:3000",
+      "windows": {
+        "command": "start vscode://ms-vscode.simple-browser/show?url=http://localhost:3000"
+      },
+      "osx": {
+        "command": "open 'vscode://ms-vscode.simple-browser/show?url=http://localhost:3000'"
+      },
+      "linux": {
+        "command": "xdg-open 'vscode://ms-vscode.simple-browser/show?url=http://localhost:3000'"
+      },
+      "presentation": { "reveal": "silent" }
+    }
+  ]
+}
